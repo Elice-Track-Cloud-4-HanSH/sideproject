@@ -31,6 +31,10 @@ public class TCPClientMulti {
 
       rcvThread.start();
 
+      // ========= 입장할 채팅방 이름 입력 ==========
+      // outToServer.write(~~~);
+      // =========================================
+
       while (true) {
         System.out.print("서버에 보낼 메시지를 입력하세요: ");
         sentence = new String(inFromUser.readLine().getBytes(), StandardCharsets.UTF_8);

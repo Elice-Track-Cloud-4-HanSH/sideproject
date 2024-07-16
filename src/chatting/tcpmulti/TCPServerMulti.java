@@ -13,6 +13,9 @@ import java.util.Set;
 
 public class TCPServerMulti {
   static Set<Socket> clients = new HashSet<>();
+  // 아래의 경우엔 채팅방별로 client를 넣을 수 있다.
+  // static Map<String, Set<Socket>> clients = new HashMap<>();
+
   public static void main(String[] args) {
     int port = 6789;
     try (ServerSocket serverSocket = new ServerSocket(port)){

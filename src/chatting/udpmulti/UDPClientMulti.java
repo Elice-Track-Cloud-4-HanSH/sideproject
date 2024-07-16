@@ -29,11 +29,17 @@ public class UDPClientMulti {
       });
       rcvThread.start();
 
+
+
+
+// ========= 입장할 채팅방 이름 입력 ==========
+//chatroomName -> 사용자 입력값
       // packet sender set
-      DatagramPacket sendPacket = new DatagramPacket("".getBytes(), 0, IPAddress, 9876);
+      String chatroomName = "";
+      DatagramPacket sendPacket = new DatagramPacket(chatroomName.getBytes(), 0, IPAddress, 9876);
       // send packet
       socket.send(sendPacket);
-
+// =========================================
       while (true) {
         System.out.print("서버에 보낼 메시지: "); String sentence = br.readLine();
         byte[] sendData = sentence.getBytes();

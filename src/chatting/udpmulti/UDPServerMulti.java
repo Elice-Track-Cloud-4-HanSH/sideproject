@@ -10,6 +10,8 @@ import java.util.Set;
 
 public class UDPServerMulti {
   static Set<SocketAddress> clientPool = new HashSet<>();
+  // 아래의 경우엔 채팅방별로 client를 넣을 수 있다.
+  // static Map<String, Set<Socket>> clients = new HashMap<>();
 
   public static void main(String[] args) {
     try (DatagramSocket socket = new DatagramSocket(9876)) {
